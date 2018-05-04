@@ -1,10 +1,8 @@
-.col-md-8.col-md-offset-2
-	.row
-		.panel.panel-default
-			.panel-heading
-				
-				- @pics.each do |pic|
-					= link_to (image_tag pic.image.url(:medium))
-					%h2= link_to pic.title, pic
+.col-md-6.col-md-offset-3
+	#pics.transitions-enabled
+		- @pics.each do |pic|
+			.box.panel.panel-default
+				= link_to (image_tag pic.image.url)
+				%h2= link_to pic.title, pic
 
-= link_to "Gram It", new_pic_path
+//= link_to "Gram It", new_pic_path

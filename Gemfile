@@ -32,6 +32,7 @@ gem 'bootstrap-sass'
 gem 'devise'
 gem 'jquery-rails'
 gem 'paperclip', github: 'thoughtbot/paperclip'
+gem 'masonry-rails'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
