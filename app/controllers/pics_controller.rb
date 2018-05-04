@@ -29,7 +29,7 @@ class PicsController < ApplicationController
 
 	def update
 		if @pic.update(pic_params)
-			redirect_to @pic, notice: "Successfuly update"
+			redirect_to @pic, notice: "Successfuly updated"
 		else		
 			render 'edit'
 		end
