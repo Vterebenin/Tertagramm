@@ -4,5 +4,7 @@
 			.panel-heading
 				
 				- @pics.each do |pic|
+					= link_to (image_tag pic.image.url(:medium))
 					%h2= link_to pic.title, pic
+
 = link_to "Gram It", new_pic_path
