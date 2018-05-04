@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
-	resources :pics
-	root 'pics#index'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :pics do
+  	member do
+  		get "like", to: "pics#upvote"
+  	end
+  end
+  
+  root "pics#index"
 end
