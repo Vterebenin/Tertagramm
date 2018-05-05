@@ -14,7 +14,7 @@
 							= @pic.user.email
 					.col-md-6
 						.btn-group.pull-right
-							= link_to like_pic_path(@pic), method: :get, class: "btn btn-default" do
+							= link_to like_pic_path(@pic), method: :put, class: "btn btn-default" do
 								%span.glyphicon.glyphicon-heart
 								= @pic.get_upvotes.size
 							-if user_signed_in?

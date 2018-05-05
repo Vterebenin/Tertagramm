@@ -3,10 +3,12 @@ class PicsController < ApplicationController
 	before_action :authenticate_user!, except: [:index, :show]
 
 	def index
+		session[:return_to] ||= request.referer
 		@pics = Pic.all.order("created_at DESC")
 	end
 
 	def show
+		session[:return_to] ||= request.referer
 	end
 
 	def new
@@ -44,14 +46,16 @@ class PicsController < ApplicationController
 		redirect_to @pic
 	end
 
+	
+
 	private
 
-	def pic_params
-		params.require(:pic).permit(:title, :description, :image)
-	end
-
-	def find_pic
-		@pic = Pic.find(params[:id])
-	end
+		def pic_params
+			params.require(:pic).permit(:title, :description, :image)
+		end
+	
+		def find_pic
+			@pic = Pic.find(params[:id])
+		end
 	
 end
