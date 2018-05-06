@@ -800,6 +800,7 @@ PLATFORMS
 DEPENDENCIES
   acts_as_votable
   aws-sdk
+  aws-sdk-s3
   bootsnap (>= 1.1.0)
   bootstrap-sass
   byebug

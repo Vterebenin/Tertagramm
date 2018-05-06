@@ -32,7 +32,7 @@ gem 'devise'
 gem 'jquery-rails'
 gem 'paperclip', github: 'thoughtbot/paperclip'
 gem 'aws-sdk'
-
+gem "aws-sdk-s3", require: false
 gem 'masonry-rails'
 gem 'acts_as_votable'
 # Use ActiveStorage variant
